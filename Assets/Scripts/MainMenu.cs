@@ -5,11 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public GameObject credits;
+
+    void Start() {
+        credits.SetActive(false);
+    }
+
     public void StartGame() {
         SceneManager.LoadScene(1);
     }
 
     public void OpenCredits() {
-
+        credits.SetActive(true);
     }
 }
