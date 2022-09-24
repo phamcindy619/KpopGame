@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Mission
+  - Countdown
+  - Timer
   layers:
   - Default
   - TransparentFX

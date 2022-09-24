@@ -4,6 +4,7 @@ using UnityEngine;
 using System.IO;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Mission : MonoBehaviour
 {
@@ -13,8 +14,8 @@ public class Mission : MonoBehaviour
 
     // Mission
     public int missionNum;
-    private string currMission;
     public TextMeshProUGUI missionsText;
+    public Button startButton;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +26,8 @@ public class Mission : MonoBehaviour
         // Get the current level and display the mission
         missionNum = int.Parse(SceneManager.GetActiveScene().name.Substring(5));
         DisplayMission(missionNum);
+
+        startButton.onClick.AddListener(GameManager.instance.CloseMission);
     }
 
     // Update is called once per frame
@@ -39,10 +42,5 @@ public class Mission : MonoBehaviour
             missionsText.text = _sr.ReadLine();
             _sr.ReadLine();
         }
-    }
-
-    // Close the Mission panel
-    public void CloseMission() {
-        gameObject.SetActive(false);
     }
 }
