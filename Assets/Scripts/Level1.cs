@@ -12,7 +12,7 @@ public class Level1 : Level
 
     // Scoring
     private int _score;
-    private const int SCORE_NEEDED_TO_WIN = 100;
+    private const int SCORE_NEEDED_TO_WIN = 50;
 
     // Start is called before the first frame update
     void Start()
