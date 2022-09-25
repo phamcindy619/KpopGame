@@ -34,13 +34,11 @@ public class Level1 : Level
     }
 
     public override void PlayGame() {
-        Debug.Log("Level 1 START");
         ticketPanel.SetActive(true);
         scoreText.gameObject.SetActive(true);
     }
 
     public override void EndGame() {
-        Debug.Log("Level 1 ENDED");
         ticketPanel.SetActive(false);
     }
 

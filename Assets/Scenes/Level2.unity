@@ -173,7 +173,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1610583314685508963, guid: d925516877564b44f82c545e1cf580ed, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7540894661822918000, guid: d925516877564b44f82c545e1cf580ed, type: 3}
       propertyPath: m_Pivot.x
@@ -298,7 +298,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1459943412}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -419,7 +419,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1459943412}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -625,7 +625,7 @@ GameObject:
   - component: {fileID: 880355669}
   - component: {fileID: 880355668}
   m_Layer: 5
-  m_Name: SongArtistName
+  m_Name: SongText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -951,6 +951,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a71c4e8dd8403140864272fa4848515, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playlist: {fileID: 1459943411}
 --- !u!1001 &1021722751
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -964,7 +965,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 261351274111138197, guid: 5312c4e6e9987f14dae19e7287a67995, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 261351274111138198, guid: 5312c4e6e9987f14dae19e7287a67995, type: 3}
       propertyPath: m_Pivot.x
@@ -996,11 +997,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 261351274111138198, guid: 5312c4e6e9987f14dae19e7287a67995, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 700
+      value: 600
       objectReference: {fileID: 0}
     - target: {fileID: 261351274111138198, guid: 5312c4e6e9987f14dae19e7287a67995, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 400
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 261351274111138198, guid: 5312c4e6e9987f14dae19e7287a67995, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1190,7 +1191,7 @@ GameObject:
   - component: {fileID: 1341700917}
   - component: {fileID: 1341700916}
   m_Layer: 5
-  m_Name: PauseImage
+  m_Name: PlayImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1209,7 +1210,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1459943412}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -1236,7 +1237,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1d885ad22f69c1c42a3a40353e52ef4d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 95574ef6e6f07da4d819039de06d08b8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1265,6 +1266,7 @@ GameObject:
   - component: {fileID: 1459943412}
   - component: {fileID: 1459943414}
   - component: {fileID: 1459943413}
+  - component: {fileID: 1459943415}
   m_Layer: 5
   m_Name: Playlist
   m_TagString: Untagged
@@ -1284,9 +1286,9 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 482444753}
   - {fileID: 384474194}
   - {fileID: 1341700915}
-  - {fileID: 482444753}
   - {fileID: 1853250950}
   - {fileID: 880355667}
   - {fileID: 1082614321}
@@ -1337,6 +1339,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1459943411}
   m_CullTransparentMesh: 1
+--- !u!114 &1459943415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459943411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63aff4c4030789f48bd0f1137a14ab4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  albumImage: {fileID: 2087663339}
+  prevButton: {fileID: 482444754}
+  nextButton: {fileID: 384474195}
+  addRemoveButton: {fileID: 1082614322}
+  songText: {fileID: 880355668}
 --- !u!1001 &1466841427
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1350,7 +1369,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6574453850893196192, guid: 97a3b1913f7e26d4f9219dbe3b23ac86, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6574453850893196195, guid: 97a3b1913f7e26d4f9219dbe3b23ac86, type: 3}
       propertyPath: m_Pivot.x
@@ -1386,7 +1405,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6574453850893196195, guid: 97a3b1913f7e26d4f9219dbe3b23ac86, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 500
+      value: 350
       objectReference: {fileID: 0}
     - target: {fileID: 6574453850893196195, guid: 97a3b1913f7e26d4f9219dbe3b23ac86, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1725,7 +1744,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7065450822921530553, guid: dd5dabfe7d8efad4d8d6aff3acbf7779, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7065450822921530554, guid: dd5dabfe7d8efad4d8d6aff3acbf7779, type: 3}
       propertyPath: m_Pivot.x
@@ -1761,7 +1780,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7065450822921530554, guid: dd5dabfe7d8efad4d8d6aff3acbf7779, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 500
+      value: 350
       objectReference: {fileID: 0}
     - target: {fileID: 7065450822921530554, guid: dd5dabfe7d8efad4d8d6aff3acbf7779, type: 3}
       propertyPath: m_LocalPosition.x

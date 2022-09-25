@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Level2 : Level
 {
+    public GameObject playlist;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,14 +20,15 @@ public class Level2 : Level
 
     void Awake() {
         GameManager.instance.OpenMission();
+        playlist.SetActive(false);
     }
 
     public override void PlayGame() {
-        
+        playlist.SetActive(true);
     }
 
     public override void EndGame() {
-        
+        playlist.SetActive(false);
     }
 
     public override bool isSuccessful() {

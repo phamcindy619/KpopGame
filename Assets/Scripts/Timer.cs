@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Timer : GameTime
 {
-    private const float TOTAL_TIME_IN_SEC = 10f;
+    private const float TOTAL_TIME_IN_SEC = 15f;
     private bool _done;
 
     // Start is called before the first frame update
