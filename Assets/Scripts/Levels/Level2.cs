@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class Level2 : Level
 {
-    public GameObject playlist;
+    public GameObject playlistPanel;
+
+    private Playlist _playlist;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        _playlist = playlistPanel.GetComponent<Playlist>();
     }
 
     // Update is called once per frame
@@ -20,18 +22,30 @@ public class Level2 : Level
 
     void Awake() {
         GameManager.instance.OpenMission();
-        playlist.SetActive(false);
+        playlistPanel.SetActive(false);
     }
 
     public override void PlayGame() {
-        playlist.SetActive(true);
+        playlistPanel.SetActive(true);
     }
 
     public override void EndGame() {
-        playlist.SetActive(false);
+        playlistPanel.SetActive(false);
     }
 
     public override bool isSuccessful() {
-        return false;
+        foreach (Song song in _playlist.songs) {
+            if (song.correct) {
+                if (!_playlist.addedToPlaylist.Contains(song)) {
+                    return false;
+                }
+            }
+            else {
+                if (_playlist.addedToPlaylist.Contains(song)) {
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 }
