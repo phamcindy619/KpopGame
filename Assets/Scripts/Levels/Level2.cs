@@ -14,12 +14,6 @@ public class Level2 : Level
         _playlist = playlistPanel.GetComponent<Playlist>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     void Awake() {
         GameManager.instance.OpenMission();
         playlistPanel.SetActive(false);
@@ -35,15 +29,11 @@ public class Level2 : Level
 
     public override bool isSuccessful() {
         foreach (Song song in _playlist.songs) {
-            if (song.correct) {
-                if (!_playlist.addedToPlaylist.Contains(song)) {
-                    return false;
-                }
+            if (song.correct && !_playlist.addedToPlaylist.Contains(song)) {
+                return false;
             }
-            else {
-                if (_playlist.addedToPlaylist.Contains(song)) {
-                    return false;
-                }
+            else if (!song.correct && _playlist.addedToPlaylist.Contains(song)) {
+                return false;
             }
         }
         return true;

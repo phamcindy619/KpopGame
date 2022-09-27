@@ -12,7 +12,7 @@ public class Level1 : Level
 
     // Scoring
     private int _score;
-    private const int SCORE_NEEDED_TO_WIN = 50;
+    private const int SCORE_NEEDED_TO_WIN = 75;
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +24,7 @@ public class Level1 : Level
     // Update is called once per frame
     void Update()
     {
-        DisplayScore();
+        
     }
 
     void Awake() {
@@ -44,6 +44,7 @@ public class Level1 : Level
 
     private void IncreaseScore() {
         _score++;
+        DisplayScore();
     }
 
     private void DisplayScore() {

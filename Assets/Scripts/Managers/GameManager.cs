@@ -32,9 +32,9 @@ public class GameManager : MonoBehaviour
 
     public void OpenMission() {
         Debug.Log("Open mission");
-        _missionPanel = GameObject.FindWithTag("Mission");
-        _countdown = GameObject.FindWithTag("Countdown");
-        _timer = GameObject.FindWithTag("Timer");
+        _missionPanel = GameObject.Find("MissionPanel");
+        _countdown = GameObject.Find("Countdown");
+        _timer = GameObject.Find("Timer");
         _successPanel = GameObject.Find("SuccessPanel");
         _failPanel = GameObject.Find("FailPanel");
 

@@ -13,7 +13,7 @@ public class Credits : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        creditsFilePath = Application.streamingAssetsPath + "/Credits.txt";
+        creditsFilePath = Application.streamingAssetsPath + "/Texts/Credits.txt";
 
         DisplayCredits();
     }
