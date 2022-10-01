@@ -7,7 +7,8 @@ public class DrawManager : MonoBehaviour
 {
     int posterLayer;
     public RectTransform posterTransform;
-    private Line activeLine;
+    public GameObject drawing;
+    private Line _activeLine;
     public GameObject linePrefab;
 
     void Start() {
@@ -20,16 +21,17 @@ public class DrawManager : MonoBehaviour
         // Mouse newly clicked
         if (Input.GetMouseButtonDown(0)) {
             GameObject line = Instantiate(linePrefab);
-            activeLine = line.GetComponent<Line>();
+            line.transform.SetParent(drawing.transform);
+            _activeLine = line.GetComponent<Line>();
         }
 
         // Mouse released
         if (Input.GetMouseButtonUp(0)) {
-            activeLine = null;
+            _activeLine = null;
         }
 
         // Mouse still clicked
-        if (activeLine != null) {
+        if (_activeLine != null) {
             Draw();
         }
     }
@@ -38,7 +40,7 @@ public class DrawManager : MonoBehaviour
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
         if (IsOnPoster()) {
-            activeLine.UpdateLine(mousePos);
+            _activeLine.UpdateLine(mousePos);
         }
     }
 

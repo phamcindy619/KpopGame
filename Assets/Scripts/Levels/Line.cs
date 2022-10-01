@@ -5,25 +5,25 @@ using UnityEngine;
 public class Line : MonoBehaviour
 {
     [SerializeField]
-    private LineRenderer lineRenderer;
-    List<Vector3> points;
+    private LineRenderer _lineRenderer;
+    List<Vector3> _points;
     
     public void UpdateLine(Vector3 mousePos) {
-        if (points == null) {
-            points = new List<Vector3>();
+        if (_points == null) {
+            _points = new List<Vector3>();
             SetPoints(mousePos);
             return;
         }
         
-        if (Vector3.Distance(points.Last(), mousePos) > 0.1f) {
+        if (Vector3.Distance(_points.Last(), mousePos) > 0.1f) {
             SetPoints(mousePos);
         }
     }
 
     void SetPoints(Vector3 point) {
-        points.Add(point);
+        _points.Add(point);
 
-        lineRenderer.positionCount = points.Count;
-        lineRenderer.SetPositions(points.ToArray());
+        _lineRenderer.positionCount = _points.Count;
+        _lineRenderer.SetPositions(_points.ToArray());
     }
 }

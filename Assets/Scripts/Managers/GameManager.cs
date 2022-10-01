@@ -65,6 +65,7 @@ public class GameManager : MonoBehaviour
 
         // Determine level success
         bool won = _level.isSuccessful();
+
         if (won) {
             LevelSuccess();
         }
