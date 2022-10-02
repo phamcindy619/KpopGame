@@ -27,7 +27,7 @@ public class Level2 : Level
         playlistPanel.SetActive(false);
     }
 
-    public override bool isSuccessful() {
+    public override bool IsSuccessful() {
         #if UNITY_EDITOR
             return true;
         #endif

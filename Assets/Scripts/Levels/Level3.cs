@@ -5,37 +5,41 @@ using TMPro;
 
 public class Level3 : Level
 {
-    public GameObject posterPanel;
-    public GameObject drawing;
-    private TextMeshProUGUI _tracingText;
-    
+    public GameObject fanchantPanel;
+
+    [SerializeField]
+    private TextMeshProUGUI fanchantText;
+    [SerializeField]
+    private TMP_InputField inputText;
 
     // Start is called before the first frame update
     void Start()
     {
-       
+        
     }
 
     void Awake() {
         GameManager.instance.OpenMission();
-        posterPanel.SetActive(false);
-        drawing.SetActive(false);
+        fanchantPanel.SetActive(false);
     }
 
     public override void PlayGame()
     {
-        posterPanel.SetActive(true);
-        drawing.SetActive(true);
+        fanchantPanel.SetActive(true);
+        inputText.Select();
     }
 
     public override void EndGame()
     {
-        posterPanel.SetActive(false);
-        drawing.SetActive(false);
+        fanchantPanel.SetActive(false);
     }
 
-    public override bool isSuccessful()
+    public override bool IsSuccessful()
     {
-        return false;
+        // Compare user input to fanchant
+        string fanchant1 = fanchantText.text.ToLower();
+        string fanchant2 = inputText.text.ToLower();
+        return fanchant1.Equals(fanchant2);
     }
+
 }

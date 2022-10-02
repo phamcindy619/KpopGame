@@ -31,7 +31,6 @@ public class GameManager : MonoBehaviour
     }
 
     public void OpenMission() {
-        Debug.Log("Open mission");
         _missionPanel = GameObject.Find("MissionPanel");
         _countdown = GameObject.Find("Countdown");
         _timer = GameObject.Find("Timer");
@@ -47,7 +46,6 @@ public class GameManager : MonoBehaviour
 
     // Closes the mission panel and starts countdown
     public void CloseMission() {
-        Debug.Log("Close mission");
         _missionPanel.SetActive(false);
         _countdown.SetActive(true);
     }
@@ -64,7 +62,7 @@ public class GameManager : MonoBehaviour
         _level.EndGame();
 
         // Determine level success
-        bool won = _level.isSuccessful();
+        bool won = _level.IsSuccessful();
 
         if (won) {
             LevelSuccess();

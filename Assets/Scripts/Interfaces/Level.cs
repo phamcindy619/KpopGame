@@ -6,5 +6,5 @@ public abstract class Level : MonoBehaviour
 {
     public abstract void PlayGame();
     public abstract void EndGame();
-    public abstract bool isSuccessful();
+    public abstract bool IsSuccessful();
 }

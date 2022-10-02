@@ -52,7 +52,7 @@ public class Level1 : Level
     }
 
     // Determines whether the level was successful
-    public override bool isSuccessful() {
+    public override bool IsSuccessful() {
         #if UNITY_EDITOR
             return true;
         #endif
