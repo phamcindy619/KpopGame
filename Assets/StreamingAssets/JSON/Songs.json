@@ -9,55 +9,55 @@
         {
             "name": "Love Plunge",
             "artist": "I HAVE",
-            "image": "",
+            "image": "LovePlunge.png",
             "correct": false
         },
         {
             "name": "Into The Old World",
             "artist": "GIRLS' ERA",
-            "image": "",
+            "image": "GirlsEra.png",
             "correct": false
         },
         {
             "name": "Time For the Lunar",
             "artist": "B-FRIEND",
-            "image": "",
+            "image": "Lunar.png",
             "correct": false
         },
         {
             "name": "I Won't Stop You",
             "artist": "CANDY",
-            "image": "",
+            "image": "MouthWideOpen.png",
             "correct": true
         },
         {
             "name": "Lovey",
             "artist": "CANDY",
-            "image": "",
+            "image": "Lovey.png",
             "correct": true
         },
         {
             "name": "Mr. Choo",
             "artist": "A-BLUE",
-            "image": "",
+            "image": "BlueBlossom.png",
             "correct": false
         },
         {
             "name": "I Like This",
             "artist": "BROTHA",
-            "image": "",
+            "image": "CrazyLove.png",
             "correct": false
         },
         {
             "name": "Die For Me",
             "artist": "CANDY",
-            "image": "",
+            "image": "DieForMe.png",
             "correct": true
         },
         {
             "name": "Me And You",
             "artist": "INSOMNIA",
-            "image": "",
+            "image": "Dream.png",
             "correct": false
         }
     ]
