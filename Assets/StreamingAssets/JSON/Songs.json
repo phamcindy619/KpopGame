@@ -3,61 +3,61 @@
         {
             "name": "NO or NO",
             "artist": "CANDY",
-            "album": "",
+            "image": "NoOrNo.png",
             "correct": true
         },
         {
             "name": "Love Plunge",
             "artist": "I HAVE",
-            "album": "",
+            "image": "",
             "correct": false
         },
         {
             "name": "Into The Old World",
             "artist": "GIRLS' ERA",
-            "album": "",
+            "image": "",
             "correct": false
         },
         {
             "name": "Time For the Lunar",
             "artist": "B-FRIEND",
-            "album": "",
+            "image": "",
             "correct": false
         },
         {
             "name": "I Won't Stop You",
             "artist": "CANDY",
-            "album": "",
+            "image": "",
             "correct": true
         },
         {
             "name": "Lovey",
             "artist": "CANDY",
-            "album": "",
+            "image": "",
             "correct": true
         },
         {
             "name": "Mr. Choo",
             "artist": "A-BLUE",
-            "album": "",
+            "image": "",
             "correct": false
         },
         {
             "name": "I Like This",
             "artist": "BROTHA",
-            "album": "",
+            "image": "",
             "correct": false
         },
         {
             "name": "Die For Me",
             "artist": "CANDY",
-            "album": "",
+            "image": "",
             "correct": true
         },
         {
             "name": "Me And You",
             "artist": "INSOMNIA",
-            "album": "",
+            "image": "",
             "correct": false
         }
     ]
