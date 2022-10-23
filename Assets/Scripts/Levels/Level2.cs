@@ -7,6 +7,7 @@ public class Level2 : Level
     public GameObject playlistPanel;
 
     private Playlist _playlist;
+    private const float TIME_FOR_LEVEL = 30f;
 
     // Start is called before the first frame update
     void Start()
@@ -41,5 +42,10 @@ public class Level2 : Level
             }
         }
         return true;
+    }
+
+    public override float GetTimeForLevel()
+    {
+        return TIME_FOR_LEVEL;
     }
 }

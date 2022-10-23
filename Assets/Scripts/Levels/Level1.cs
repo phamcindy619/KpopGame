@@ -13,6 +13,7 @@ public class Level1 : Level
     // Scoring
     private int _score;
     private const int SCORE_NEEDED_TO_WIN = 75;
+    private const float TIME_FOR_LEVEL = 15f;
 
     // Start is called before the first frame update
     void Start()
@@ -61,5 +62,10 @@ public class Level1 : Level
             return true;
         }
         return false;
+    }
+
+    public override float GetTimeForLevel()
+    {
+        return TIME_FOR_LEVEL;
     }
 }

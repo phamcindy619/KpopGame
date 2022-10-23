@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class Timer : GameTime
 {
-    private const float DEFAULT_TIME = 15f;
     private bool _done;
 
     // Start is called before the first frame update
     void Start()
     {
-        _timeLeft = DEFAULT_TIME;
         _done = false;
     }
 
@@ -22,5 +20,9 @@ public class Timer : GameTime
             _done = true;
             GameManager.instance.EndLevel();
         }
+    }
+
+    public void SetStartTime(float time) {
+        _timeLeft = time;
     }
 }

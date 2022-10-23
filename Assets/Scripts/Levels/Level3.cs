@@ -11,6 +11,7 @@ public class Level3 : Level
     private TextMeshProUGUI fanchantText;
     [SerializeField]
     private TMP_InputField inputText;
+    private const float TIME_FOR_LEVEL = 20f;
 
     // Start is called before the first frame update
     void Start()
@@ -40,6 +41,11 @@ public class Level3 : Level
         string fanchant1 = fanchantText.text.ToLower();
         string fanchant2 = inputText.text.ToLower();
         return fanchant1.Equals(fanchant2);
+    }
+
+    public override float GetTimeForLevel()
+    {
+        return TIME_FOR_LEVEL;
     }
 
 }

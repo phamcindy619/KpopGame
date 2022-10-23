@@ -6,7 +6,6 @@ using TMPro;
 public class GameTime : MonoBehaviour
 {
     protected float _timeLeft;
-    
     public TextMeshProUGUI timeText;
 
     // Update is called once per frame

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    // Make the GameManager class a singleton
+    // Singleton instance
     public static GameManager instance = null;
 
     // Game Objects in every scene
@@ -52,9 +52,10 @@ public class GameManager : MonoBehaviour
 
     // Needs to call the level's start game method
     public void StartLevel() {
-        _timer.SetActive(true);
-
         _level = GameObject.Find("Canvas").GetComponent<Level>();
+
+        _timer.GetComponent<Timer>().SetStartTime(_level.GetTimeForLevel());
+        _timer.SetActive(true);
         _level.PlayGame();
     }
 
