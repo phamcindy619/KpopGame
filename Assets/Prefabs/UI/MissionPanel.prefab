@@ -499,6 +499,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   missionText: {fileID: 261351272871241284}
   startButton: {fileID: 261351274470209823}
+  clickClip: {fileID: 8300000, guid: 8bd460a24bb9aff489c46d5e9b2566df, type: 3}
 --- !u!1 &261351274470209821
 GameObject:
   m_ObjectHideFlags: 0
@@ -620,7 +621,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 261351274470209824}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4831449572307923824
 GameObject:
   m_ObjectHideFlags: 0

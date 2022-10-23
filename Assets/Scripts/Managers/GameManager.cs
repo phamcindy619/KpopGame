@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     // Singleton instance
     public static GameManager instance = null;
 
-    // Game Objects in every scene
+    // UI
     private GameObject _missionPanel;
     private GameObject _countdown;
     private GameObject _timer;
@@ -17,6 +17,10 @@ public class GameManager : MonoBehaviour
 
     private GameObject _successPanel;
     private GameObject _failPanel;
+
+    // Sounds
+    public AudioClip successClip;
+    public AudioClip failureClip;
 
     private void Awake() {
         // Check if there is another GameManager
@@ -74,11 +78,13 @@ public class GameManager : MonoBehaviour
     }
 
     private void LevelSuccess() {
+        SoundManager.instance.PlaySingle(successClip);
         // Display mission success panel
         _successPanel.SetActive(true);
     }
 
     private void LevelFailure() {
+        SoundManager.instance.PlaySingle(failureClip);
         // Display mission fail panel
         _failPanel.SetActive(true);
     }

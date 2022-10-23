@@ -12,6 +12,9 @@ public class Mission : ReadTextFile
     public TextMeshProUGUI missionText;
     public Button startButton;
 
+    // Sounds
+    public AudioClip clickClip;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,5 +23,6 @@ public class Mission : ReadTextFile
         DisplayText(_missionsFilePath, missionText);
 
         startButton.onClick.AddListener(GameManager.instance.CloseMission);
+        startButton.onClick.AddListener(() => SoundManager.instance.PlaySingle(clickClip));
     }
 }

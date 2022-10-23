@@ -11,6 +11,9 @@ public class Failure : ReadTextFile
     // UI
     public TextMeshProUGUI failText;
     public Button restartButton;
+    
+    // Sounds
+    public AudioClip clickClip;
 
     // Start is called before the first frame update
     void Start()
@@ -20,5 +23,6 @@ public class Failure : ReadTextFile
         DisplayText(_failFilePath, failText);
 
         restartButton.onClick.AddListener(GameManager.instance.RestartLevel);
+        restartButton.onClick.AddListener(() => SoundManager.instance.PlaySingle(clickClip));
     }
 }

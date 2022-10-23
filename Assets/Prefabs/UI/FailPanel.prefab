@@ -364,6 +364,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   failText: {fileID: 7065450821706707816}
   restartButton: {fileID: 7065450823297510451}
+  clickClip: {fileID: 8300000, guid: 8bd460a24bb9aff489c46d5e9b2566df, type: 3}
 --- !u!1 &7065450823297510449
 GameObject:
   m_ObjectHideFlags: 0

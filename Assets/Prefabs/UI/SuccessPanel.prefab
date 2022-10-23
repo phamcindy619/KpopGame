@@ -364,6 +364,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   successText: {fileID: 6574453849931334769}
   nextButton: {fileID: 6574453851521882922}
+  clickClip: {fileID: 8300000, guid: 8bd460a24bb9aff489c46d5e9b2566df, type: 3}
 --- !u!1 &6574453851521882920
 GameObject:
   m_ObjectHideFlags: 0

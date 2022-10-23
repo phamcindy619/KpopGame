@@ -861,6 +861,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 999348076}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: PlaySingle
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 8bd460a24bb9aff489c46d5e9b2566df, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &870604235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1047,6 +1059,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d32502d1fe1387c45bc912e2768ca6cd, type: 3}
+--- !u!114 &999348076 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8038608822030620573, guid: d32502d1fe1387c45bc912e2768ca6cd, type: 3}
+  m_PrefabInstance: {fileID: 999348075}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d9dea4269352394c8c28d875d564d47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1049060170
 GameObject:
   m_ObjectHideFlags: 0
@@ -1662,6 +1685,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 999348076}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: PlaySingle
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 8bd460a24bb9aff489c46d5e9b2566df, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1590475288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1859,6 +1894,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 999348076}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: PlaySingle
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 8bd460a24bb9aff489c46d5e9b2566df, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2123,6 +2170,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 382314051, guid: 87732be2ad82c4f44bd6e74a825546e5, type: 3}
+      propertyPath: failureClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 985bf9353f40a4147ab6b6654a6f1349, type: 3}
+    - target: {fileID: 382314051, guid: 87732be2ad82c4f44bd6e74a825546e5, type: 3}
+      propertyPath: successClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 2f3836838c5c2394d9e5bcfb65147c81, type: 3}
     - target: {fileID: 2136605071848566152, guid: 87732be2ad82c4f44bd6e74a825546e5, type: 3}
       propertyPath: m_Name
       value: GameManager
