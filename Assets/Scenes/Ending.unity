@@ -274,7 +274,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 183344062}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1489024532}
+        m_TargetAssemblyTypeName: Ending, Assembly-CSharp
+        m_MethodName: EndGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &183344062
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -295,7 +307,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 615865e1eadedff4c9a89fdd9bcebe92, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -553,8 +565,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1592,6 +1604,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   endingSong: {fileID: 8300000, guid: f586a038c3bef014fbee916c620c5207, type: 3}
   cheeringClip: {fileID: 8300000, guid: 3710b1757c46b8b4ab87e9db6d8bb948, type: 3}
+  clickClip: {fileID: 8300000, guid: 8bd460a24bb9aff489c46d5e9b2566df, type: 3}
+  mainMenuButton: {fileID: 183344061}
 --- !u!1 &1548246294
 GameObject:
   m_ObjectHideFlags: 0

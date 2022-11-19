@@ -37,9 +37,9 @@ public class Level3 : Level
 
     public override bool IsSuccessful()
     {
-        #if UNITY_EDITOR
-            return true;
-        #endif
+        // #if UNITY_EDITOR
+        //     return true;
+        // #endif
         
         // Compare user input to fanchant
         string fanchant1 = fanchantText.text.ToLower();

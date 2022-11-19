@@ -29,9 +29,9 @@ public class Level2 : Level
     }
 
     public override bool IsSuccessful() {
-        #if UNITY_EDITOR
-            return true;
-        #endif
+        // #if UNITY_EDITOR
+        //     return true;
+        // #endif
         
         foreach (Song song in _playlist.songs) {
             if (song.correct && !_playlist.addedToPlaylist.Contains(song)) {
