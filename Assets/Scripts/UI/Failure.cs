@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
-public class Failure : ReadTextFile
+public class Failure : MonoBehaviour
 {
     private string _failFilePath;
 
@@ -20,9 +20,14 @@ public class Failure : ReadTextFile
     {
         _failFilePath = Application.streamingAssetsPath + "/Texts/Failure.txt";
         
-        DisplayText(_failFilePath, failText);
+        failText.gameObject.AddComponent<ReadTextFile>();
+        DisplayText();
 
         restartButton.onClick.AddListener(GameManager.instance.RestartLevel);
         restartButton.onClick.AddListener(() => SoundManager.instance.PlaySingle(clickClip));
+    }
+
+    public void DisplayText() {
+        failText.text = failText.gameObject.GetComponent<ReadTextFile>().ReadText(_failFilePath);
     }
 }

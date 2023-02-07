@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
-public class Success : ReadTextFile
+public class Success : MonoBehaviour
 {
     private string _successFilePath;
 
@@ -20,9 +20,14 @@ public class Success : ReadTextFile
     {
         _successFilePath = Application.streamingAssetsPath + "/Texts/Success.txt";
 
-        DisplayText(_successFilePath, successText);
+        successText.gameObject.AddComponent<ReadTextFile>();
+        DisplayText();
 
         nextButton.onClick.AddListener(GameManager.instance.NextLevel);
         nextButton.onClick.AddListener(() => SoundManager.instance.PlaySingle(clickClip));
+    }
+
+    public void DisplayText() {
+        successText.text = successText.gameObject.GetComponent<ReadTextFile>().ReadText(_successFilePath);
     }
 }

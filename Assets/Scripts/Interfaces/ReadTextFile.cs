@@ -18,14 +18,15 @@ public class ReadTextFile : MonoBehaviour
 {
     private StreamReader _sr;
 
-    public void DisplayText(string filePath, TextMeshProUGUI textBox) {
+    public string ReadText(string filePath) {
         _sr = new StreamReader(filePath);
-
+        string text = "";
         int levelNum = int.Parse(SceneManager.GetActiveScene().name.Substring(5));
 
         for (int i = 0; i < levelNum; i++) {
-            textBox.text = _sr.ReadLine();
+            text = _sr.ReadLine();
             _sr.ReadLine();
         }
+        return text;
     }
 }

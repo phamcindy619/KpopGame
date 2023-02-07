@@ -24,12 +24,6 @@ public class Credits : MonoBehaviour
         backButton.onClick.AddListener(() => SoundManager.instance.PlaySingle(clickClip));
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     // Display all the text from the credits file
     private void DisplayCredits() {
         string[] fileLines = File.ReadAllLines(creditsFilePath);

@@ -12,7 +12,7 @@ public class Level1 : Level
 
     // Scoring
     private int _score;
-    private const int SCORE_NEEDED_TO_WIN = 75;
+    private const int SCORE_NEEDED_TO_WIN = 60;
     private const float TIME_FOR_LEVEL = 15f;
 
     // Start is called before the first frame update
@@ -54,10 +54,6 @@ public class Level1 : Level
 
     // Determines whether the level was successful
     public override bool IsSuccessful() {
-        // #if UNITY_EDITOR
-        //     return true;
-        // #endif
-
         if (_score >= SCORE_NEEDED_TO_WIN) {
             return true;
         }

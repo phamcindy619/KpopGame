@@ -1,2 +1,8 @@
-Font made by Kenney
-Game made by Cindy Pham
+- Game by Cindy Pham
+- Font by Kenney
+- Logos by Canva
+- UI by Eun woo on Unity Asset Store
+- Stage image by upklyak on Freepik
+- Music by PapaninKasettratat (https://freesound.org/people/PapaninKasettratat/sounds/453161/)
+- SFX by Johanneskristjansson (https://freesound.org/people/Johanneskristjansson/sounds/371339/)
+- Character sprites by Character sprites: Emilio J. Sanchez-Sierra, Benjamin K. Smith (BenCreating), bluecarrot16, TheraHedwig, Evert, MuffinElZangano, Durrani, Pierre Vigier (pvigier), ElizaWy, Matthew Krohn (makrohn), Johannes Sjölund (wulax), Stephen Challener (Redshrike), Thane Brimhall (pennomi), Mandi Paugh, Lanea Zimmerman (Sharm), Nila122, laetissima, William.Thompsonj
