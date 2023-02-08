@@ -10,11 +10,14 @@ public class MainMenu : MonoBehaviour
     public Button creditsButton;
     public Button startButton;
 
+    private LevelLoader _loader;
+
     // Sounds
     public AudioClip backgroundSong;
     public AudioClip clickClip;
 
     void Start() {
+        _loader = GameObject.Find("LevelLoader").GetComponent<LevelLoader>();
         credits.SetActive(false);
         SoundManager.instance.PlayMusic(backgroundSong);
         creditsButton.onClick.AddListener(() => SoundManager.instance.PlaySingle(clickClip));
@@ -22,7 +25,7 @@ public class MainMenu : MonoBehaviour
     }
 
     public void StartGame() {
-        SceneManager.LoadScene(1);
+        StartCoroutine(_loader.LoadLevel(1));
     }
 
     public void OpenCredits() {
