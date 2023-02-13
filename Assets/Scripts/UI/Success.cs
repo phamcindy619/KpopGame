@@ -12,9 +12,6 @@ public class Success : MonoBehaviour
     public TextMeshProUGUI successText;
     public Button nextButton;
 
-    // Sounds
-    public AudioClip clickClip;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +21,7 @@ public class Success : MonoBehaviour
         DisplayText();
 
         nextButton.onClick.AddListener(GameManager.instance.NextLevel);
-        nextButton.onClick.AddListener(() => SoundManager.instance.PlaySingle(clickClip));
+        nextButton.onClick.AddListener(EventManager.ButtonClicked);
     }
 
     public void DisplayText() {

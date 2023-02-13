@@ -13,9 +13,6 @@ public class Mission : MonoBehaviour
     public Button startButton;
     public float textSpeed = 0.05f;
 
-    // Sounds
-    public AudioClip clickClip;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +23,7 @@ public class Mission : MonoBehaviour
         DisplayText();
 
         startButton.onClick.AddListener(GameManager.instance.CloseMission);
-        startButton.onClick.AddListener(() => SoundManager.instance.PlaySingle(clickClip));
+        startButton.onClick.AddListener(EventManager.ButtonClicked);
     }
 
     void DisplayText() {

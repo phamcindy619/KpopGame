@@ -11,9 +11,6 @@ public class Failure : MonoBehaviour
     // UI
     public TextMeshProUGUI failText;
     public Button restartButton;
-    
-    // Sounds
-    public AudioClip clickClip;
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +21,7 @@ public class Failure : MonoBehaviour
         DisplayText();
 
         restartButton.onClick.AddListener(GameManager.instance.RestartLevel);
-        restartButton.onClick.AddListener(() => SoundManager.instance.PlaySingle(clickClip));
+        restartButton.onClick.AddListener(EventManager.ButtonClicked);
     }
 
     public void DisplayText() {

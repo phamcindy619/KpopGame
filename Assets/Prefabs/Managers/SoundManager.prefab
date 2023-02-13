@@ -46,8 +46,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d9dea4269352394c8c28d875d564d47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  efxSource: {fileID: 999348078}
-  musicSource: {fileID: 999348077}
+  _sfxSource: {fileID: 999348078}
+  _musicSource: {fileID: 999348077}
+  _bgm: {fileID: 8300000, guid: 03afe1ea98d30aa4a8893d326445e7bf, type: 3}
+  _endingSong: {fileID: 8300000, guid: f586a038c3bef014fbee916c620c5207, type: 3}
+  _clickSFX: {fileID: 8300000, guid: 8bd460a24bb9aff489c46d5e9b2566df, type: 3}
+  _successSFX: {fileID: 8300000, guid: 2f3836838c5c2394d9e5bcfb65147c81, type: 3}
+  _failureSFX: {fileID: 8300000, guid: 985bf9353f40a4147ab6b6654a6f1349, type: 3}
+  _cheer_SFX: {fileID: 8300000, guid: 3710b1757c46b8b4ab87e9db6d8bb948, type: 3}
+  onButtonClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!82 &999348078
 AudioSource:
   m_ObjectHideFlags: 0

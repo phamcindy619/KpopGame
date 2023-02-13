@@ -12,7 +12,6 @@ public class Credits : MonoBehaviour
     public TextMeshProUGUI creditsText;
 
     public Button backButton;
-    public AudioClip clickClip;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +20,7 @@ public class Credits : MonoBehaviour
 
         DisplayCredits();
 
-        backButton.onClick.AddListener(() => SoundManager.instance.PlaySingle(clickClip));
+        backButton.onClick.AddListener(EventManager.ButtonClicked);
     }
 
     // Display all the text from the credits file

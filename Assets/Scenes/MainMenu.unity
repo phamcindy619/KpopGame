@@ -953,8 +953,6 @@ MonoBehaviour:
   credits: {fileID: 1231874978}
   creditsButton: {fileID: 1701569115}
   startButton: {fileID: 870604234}
-  backgroundSong: {fileID: 8300000, guid: 03afe1ea98d30aa4a8893d326445e7bf, type: 3}
-  clickClip: {fileID: 8300000, guid: 8bd460a24bb9aff489c46d5e9b2566df, type: 3}
 --- !u!1 &945311071
 GameObject:
   m_ObjectHideFlags: 0
@@ -1431,7 +1429,6 @@ MonoBehaviour:
   creditsFilePath: 
   creditsText: {fileID: 811763977}
   backButton: {fileID: 1590475287}
-  clickClip: {fileID: 8300000, guid: 8bd460a24bb9aff489c46d5e9b2566df, type: 3}
 --- !u!1 &1335678115
 GameObject:
   m_ObjectHideFlags: 0
