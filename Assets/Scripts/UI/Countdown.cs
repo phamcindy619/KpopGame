@@ -5,7 +5,7 @@ using TMPro;
 
 public class Countdown : GameTime
 {
-    private const float COUNTDOWN_TIME_IN_SEC = 5f;
+    private const float COUNTDOWN_TIME_IN_SEC = 3f;
 
     // Start is called before the first frame update
     void Start()
@@ -21,9 +21,7 @@ public class Countdown : GameTime
 
         if (_timeLeft <= 0) {
             gameObject.SetActive(false);
-            
-            // Start level
-            GameManager.instance.StartLevel();
+            EventManager.OnMissionStart();
         }
     }
 }

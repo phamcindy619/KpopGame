@@ -20,7 +20,8 @@ public class SoundManager : MonoBehaviour
     [SerializeField] private AudioClip _clickSFX;
     [SerializeField] private AudioClip _successSFX;
     [SerializeField] private AudioClip _failureSFX;
-    [SerializeField] private AudioClip _cheer_SFX;
+    [SerializeField] private AudioClip _cheerSFX;
+    [SerializeField] private AudioClip _countdownSFX;
 
     private void Awake() {
         if (instance == null) {
@@ -36,6 +37,7 @@ public class SoundManager : MonoBehaviour
     private void OnEnable() {
         EventManager.GameStarted += PlayBGM;
         EventManager.ButtonClicked += ClickSFX;
+        EventManager.CountdownStarted += CountdownSFX;
         EventManager.LevelCleared += SuccessSFX;
         EventManager.LevelFailed += FailureSFX;
         EventManager.EndingSceneOpened += CheerSFX;
@@ -45,6 +47,7 @@ public class SoundManager : MonoBehaviour
     private void OnDisable() {
         EventManager.GameStarted -= PlayBGM;
         EventManager.ButtonClicked -= ClickSFX;
+        EventManager.CountdownStarted -= CountdownSFX;
         EventManager.LevelCleared -= SuccessSFX;
         EventManager.LevelFailed -= FailureSFX;
         EventManager.EndingSceneOpened -= CheerSFX;
@@ -77,6 +80,10 @@ public class SoundManager : MonoBehaviour
     }
 
     private void CheerSFX() {
-        _sfxSource.PlayOneShot(_cheer_SFX);
+        _sfxSource.PlayOneShot(_cheerSFX);
+    }
+
+    private void CountdownSFX() {
+        _sfxSource.PlayOneShot(_countdownSFX);
     }
 }

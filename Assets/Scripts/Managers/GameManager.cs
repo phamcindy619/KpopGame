@@ -24,9 +24,18 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
+    private void OnEnable() {
+        EventManager.MissionStarted += StartLevel;
+        EventManager.MissionEnded += EndLevel;
+    }
+
+    private void OnDisable() {
+        EventManager.MissionStarted -= StartLevel;
+        EventManager.MissionEnded -= EndLevel;
+    }
+
     // Needs to call the level's start game method
     public void StartLevel() {
-        EventManager.OnLevelStart();
         _level = FindObjectsOfType<MonoBehaviour>().OfType<ILevel>().FirstOrDefault();
         _loader = FindObjectOfType<LevelLoader>() as LevelLoader;
         _level.PlayGame();

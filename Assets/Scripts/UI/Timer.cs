@@ -18,7 +18,7 @@ public class Timer : GameTime
         base.Update();
         if (_timeLeft <= 0 && !_done) {
             _done = true;
-            GameManager.instance.EndLevel();
+            EventManager.OnMissionEnd();
         }
     }
 

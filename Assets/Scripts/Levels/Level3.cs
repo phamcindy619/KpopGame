@@ -20,7 +20,7 @@ public class Level3 : MonoBehaviour, ILevel
     }
 
     void Awake() {
-        EventManager.OnLevelOpen();
+        EventManager.OnLevelStart();
         fanchantPanel.SetActive(false);
     }
 

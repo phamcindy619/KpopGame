@@ -43,8 +43,11 @@ public class Playlist : MonoBehaviour
 
         // Listeners
         prevButton.onClick.AddListener(PrevSong);
+        prevButton.onClick.AddListener(EventManager.ButtonClicked);
         nextButton.onClick.AddListener(NextSong);
+        nextButton.onClick.AddListener(EventManager.ButtonClicked);
         addRemoveButton.onClick.AddListener(AddRemoveSong);
+        addRemoveButton.onClick.AddListener(EventManager.ButtonClicked);
 
         // Get songs
         LoadSongs();
@@ -113,6 +116,4 @@ public class Playlist : MonoBehaviour
         tex.LoadImage(pngBytes);
         return Sprite.Create(tex, new Rect(0f, 0f, tex.width, tex.height), new Vector2(0.5f, 0.5f), 100f);
     }
-
-
 }

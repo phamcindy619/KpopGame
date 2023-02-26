@@ -24,7 +24,7 @@ public class Level1 : MonoBehaviour, ILevel
     }
 
     void Awake() {
-        EventManager.LevelOpened();
+        EventManager.OnLevelStart();
         
         ticketPanel.SetActive(false);
         scoreText.gameObject.SetActive(false);

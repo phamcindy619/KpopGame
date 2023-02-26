@@ -16,7 +16,7 @@ public class Level2 : MonoBehaviour, ILevel
     }
 
     void Awake() {
-        EventManager.OnLevelOpen();
+        EventManager.OnLevelStart();
         playlistPanel.SetActive(false);
     }
 

@@ -1033,15 +1033,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1971816596154229743, guid: d32502d1fe1387c45bc912e2768ca6cd, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1971816596154229743, guid: d32502d1fe1387c45bc912e2768ca6cd, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1971816596154229743, guid: d32502d1fe1387c45bc912e2768ca6cd, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1971816596154229743, guid: d32502d1fe1387c45bc912e2768ca6cd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1059,6 +1059,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoundManager
       objectReference: {fileID: 0}
+    - target: {fileID: 8038608822030620573, guid: d32502d1fe1387c45bc912e2768ca6cd, type: 3}
+      propertyPath: _cheerSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: 3710b1757c46b8b4ab87e9db6d8bb948, type: 3}
+    - target: {fileID: 8038608822030620573, guid: d32502d1fe1387c45bc912e2768ca6cd, type: 3}
+      propertyPath: _countdownSFX
+      value: 
+      objectReference: {fileID: 8300000, guid: ca276495dd93a6049bbb9038336ce119, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d32502d1fe1387c45bc912e2768ca6cd, type: 3}
 --- !u!1 &1049060170
@@ -1934,11 +1942,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7547f605ce5b64b469cbc900000fa80d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _missionPanel: {fileID: 261351274111138197, guid: 5312c4e6e9987f14dae19e7287a67995, type: 3}
-  _countdown: {fileID: 1610583314685508963, guid: d925516877564b44f82c545e1cf580ed, type: 3}
-  _timer: {fileID: 8319961415926499449, guid: 3845a2e620c7c2b4baadb64872841a36, type: 3}
-  _successPanel: {fileID: 6574453850893196192, guid: 97a3b1913f7e26d4f9219dbe3b23ac86, type: 3}
-  _failPanel: {fileID: 7065450822921530553, guid: dd5dabfe7d8efad4d8d6aff3acbf7779, type: 3}
 --- !u!1 &1917582316
 GameObject:
   m_ObjectHideFlags: 0
@@ -2186,7 +2189,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6184760998541135581, guid: 87732be2ad82c4f44bd6e74a825546e5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.0208852
+      value: -2.0208855
       objectReference: {fileID: 0}
     - target: {fileID: 6184760998541135581, guid: 87732be2ad82c4f44bd6e74a825546e5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2194,15 +2197,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6184760998541135581, guid: 87732be2ad82c4f44bd6e74a825546e5, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6184760998541135581, guid: 87732be2ad82c4f44bd6e74a825546e5, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6184760998541135581, guid: 87732be2ad82c4f44bd6e74a825546e5, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6184760998541135581, guid: 87732be2ad82c4f44bd6e74a825546e5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

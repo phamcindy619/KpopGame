@@ -12,11 +12,21 @@ public class UIManager : MonoBehaviour
     private GameObject _failPanel;
 
     private void OnEnable() {
-        EventManager.LevelOpened += OpenMission;
+        EventManager.LevelStarted += OpenMission;
         EventManager.CountdownStarted += CloseMission;
-        EventManager.LevelStarted += StartTimer;
+        EventManager.CountdownStarted += OpenCountdown;
+        EventManager.MissionStarted += StartTimer;
         EventManager.LevelCleared += OpenSuccess;
         EventManager.LevelFailed += OpenFail;
+    }
+
+    private void OnDisable() {
+        EventManager.LevelStarted -= OpenMission;
+        EventManager.CountdownStarted -= CloseMission;
+        EventManager.CountdownStarted -= OpenCountdown;
+        EventManager.MissionStarted -= StartTimer;
+        EventManager.LevelCleared -= OpenSuccess;
+        EventManager.LevelFailed -= OpenFail;
     }
 
     private void OpenMission() {
@@ -35,6 +45,9 @@ public class UIManager : MonoBehaviour
 
     private void CloseMission() {
         _missionPanel.SetActive(false);
+    }
+
+    private void OpenCountdown() {
         _countdown.SetActive(true);
     }
 
