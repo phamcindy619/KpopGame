@@ -21,7 +21,7 @@ public class Countdown : GameTime
 
         if (_timeLeft <= 0) {
             gameObject.SetActive(false);
-
+            
             // Start level
             GameManager.instance.StartLevel();
         }

@@ -16,7 +16,7 @@ public class MainMenu : MonoBehaviour
         credits.SetActive(false);
         creditsButton.onClick.AddListener(EventManager.ButtonClicked);
         startButton.onClick.AddListener(EventManager.ButtonClicked);
-        EventManager.OnGameStarted();
+        EventManager.OnGameStart();
     }
 
     public void StartGame() {

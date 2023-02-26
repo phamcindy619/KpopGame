@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class Level1 : Level
 {
+    // UI
     public GameObject ticketPanel;
     public Button buyButton;
     public TextMeshProUGUI scoreText;
@@ -22,14 +23,9 @@ public class Level1 : Level
         buyButton.onClick.AddListener(IncreaseScore);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     void Awake() {
-        GameManager.instance.OpenMission();
+        EventManager.LevelOpened();
+        
         ticketPanel.SetActive(false);
         scoreText.gameObject.SetActive(false);
     }

@@ -20,7 +20,7 @@ public class Level3 : Level
     }
 
     void Awake() {
-        GameManager.instance.OpenMission();
+        EventManager.OnLevelOpen();
         fanchantPanel.SetActive(false);
     }
 

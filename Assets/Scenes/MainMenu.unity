@@ -1917,6 +1917,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1701569113}
   m_CullTransparentMesh: 1
+--- !u!1 &1815585606 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2136605071848566152, guid: 87732be2ad82c4f44bd6e74a825546e5, type: 3}
+  m_PrefabInstance: {fileID: 248535947588751864}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1815585609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1815585606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7547f605ce5b64b469cbc900000fa80d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _missionPanel: {fileID: 261351274111138197, guid: 5312c4e6e9987f14dae19e7287a67995, type: 3}
+  _countdown: {fileID: 1610583314685508963, guid: d925516877564b44f82c545e1cf580ed, type: 3}
+  _timer: {fileID: 8319961415926499449, guid: 3845a2e620c7c2b4baadb64872841a36, type: 3}
+  _successPanel: {fileID: 6574453850893196192, guid: 97a3b1913f7e26d4f9219dbe3b23ac86, type: 3}
+  _failPanel: {fileID: 7065450822921530553, guid: dd5dabfe7d8efad4d8d6aff3acbf7779, type: 3}
 --- !u!1 &1917582316
 GameObject:
   m_ObjectHideFlags: 0

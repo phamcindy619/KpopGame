@@ -22,7 +22,7 @@ public class Mission : MonoBehaviour
         missionText.gameObject.AddComponent<TextWriter>();
         DisplayText();
 
-        startButton.onClick.AddListener(GameManager.instance.CloseMission);
+        startButton.onClick.AddListener(EventManager.CountdownStarted);
         startButton.onClick.AddListener(EventManager.ButtonClicked);
     }
 

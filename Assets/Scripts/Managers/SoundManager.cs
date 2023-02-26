@@ -34,21 +34,21 @@ public class SoundManager : MonoBehaviour
     }
 
     private void OnEnable() {
-        EventManager.GameStarted += BGM;
+        EventManager.GameStarted += PlayBGM;
         EventManager.ButtonClicked += ClickSFX;
         EventManager.LevelCleared += SuccessSFX;
         EventManager.LevelFailed += FailureSFX;
         EventManager.EndingSceneOpened += CheerSFX;
-        EventManager.EndingSceneOpened += EndingMusic;
+        EventManager.EndingSceneOpened += PlayEndingMusic;
     }
 
     private void OnDisable() {
-        EventManager.GameStarted -= BGM;
+        EventManager.GameStarted -= PlayBGM;
         EventManager.ButtonClicked -= ClickSFX;
         EventManager.LevelCleared -= SuccessSFX;
         EventManager.LevelFailed -= FailureSFX;
         EventManager.EndingSceneOpened -= CheerSFX;
-        EventManager.EndingSceneOpened -= EndingMusic;
+        EventManager.EndingSceneOpened -= PlayEndingMusic;
     }
 
     private void PlayMusic(AudioClip clip) {
@@ -56,11 +56,11 @@ public class SoundManager : MonoBehaviour
         _musicSource.Play();
     }
 
-    private void BGM() {
+    private void PlayBGM() {
         PlayMusic(_bgm);
     }
 
-    private void EndingMusic() {
+    private void PlayEndingMusic() {
         PlayMusic(_endingSong);
     }
 

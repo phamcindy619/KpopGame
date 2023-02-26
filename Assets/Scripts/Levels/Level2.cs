@@ -16,7 +16,7 @@ public class Level2 : Level
     }
 
     void Awake() {
-        GameManager.instance.OpenMission();
+        EventManager.OnLevelOpen();
         playlistPanel.SetActive(false);
     }
 
