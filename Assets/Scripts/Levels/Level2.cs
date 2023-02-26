@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Level2 : Level
+public class Level2 : MonoBehaviour, ILevel
 {
     public GameObject playlistPanel;
 
@@ -20,15 +20,15 @@ public class Level2 : Level
         playlistPanel.SetActive(false);
     }
 
-    public override void PlayGame() {
+    public void PlayGame() {
         playlistPanel.SetActive(true);
     }
 
-    public override void EndGame() {
+    public void EndGame() {
         playlistPanel.SetActive(false);
     }
 
-    public override bool IsSuccessful() {
+    public bool IsSuccessful() {
         foreach (Song song in _playlist.songs) {
             if (song.correct && !_playlist.addedToPlaylist.Contains(song)) {
                 return false;
@@ -40,7 +40,7 @@ public class Level2 : Level
         return true;
     }
 
-    public override float GetTimeForLevel()
+    public float GetTimeForLevel()
     {
         return TIME_FOR_LEVEL;
     }

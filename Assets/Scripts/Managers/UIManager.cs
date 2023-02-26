@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class UIManager : MonoBehaviour
 {
@@ -38,7 +39,7 @@ public class UIManager : MonoBehaviour
     }
 
     private void StartTimer() {
-        Level lvl = GameObject.FindObjectOfType<Level>() as Level;
+        ILevel lvl = FindObjectsOfType<MonoBehaviour>().OfType<ILevel>().FirstOrDefault();
         _timer.GetComponent<Timer>().SetStartTime(lvl.GetTimeForLevel());
         _timer.SetActive(true);
     }

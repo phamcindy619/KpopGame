@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class Level3 : Level
+public class Level3 : MonoBehaviour, ILevel
 {
     public GameObject fanchantPanel;
 
@@ -24,18 +24,18 @@ public class Level3 : Level
         fanchantPanel.SetActive(false);
     }
 
-    public override void PlayGame()
+    public void PlayGame()
     {
         fanchantPanel.SetActive(true);
         inputText.Select();
     }
 
-    public override void EndGame()
+    public void EndGame()
     {
         fanchantPanel.SetActive(false);
     }
 
-    public override bool IsSuccessful()
+    public bool IsSuccessful()
     {
         // Compare user input to fanchant
         string fanchant1 = fanchantText.text.ToLower();
@@ -43,7 +43,7 @@ public class Level3 : Level
         return fanchant1.Equals(fanchant2);
     }
 
-    public override float GetTimeForLevel()
+    public float GetTimeForLevel()
     {
         return TIME_FOR_LEVEL;
     }

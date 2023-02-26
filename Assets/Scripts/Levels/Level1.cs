@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
-public class Level1 : Level
+public class Level1 : MonoBehaviour, ILevel
 {
     // UI
     public GameObject ticketPanel;
@@ -30,12 +30,12 @@ public class Level1 : Level
         scoreText.gameObject.SetActive(false);
     }
 
-    public override void PlayGame() {
+    public void PlayGame() {
         ticketPanel.SetActive(true);
         scoreText.gameObject.SetActive(true);
     }
 
-    public override void EndGame() {
+    public void EndGame() {
         ticketPanel.SetActive(false);
     }
 
@@ -49,14 +49,14 @@ public class Level1 : Level
     }
 
     // Determines whether the level was successful
-    public override bool IsSuccessful() {
+    public bool IsSuccessful() {
         if (_score >= SCORE_NEEDED_TO_WIN) {
             return true;
         }
         return false;
     }
 
-    public override float GetTimeForLevel()
+    public float GetTimeForLevel()
     {
         return TIME_FOR_LEVEL;
     }

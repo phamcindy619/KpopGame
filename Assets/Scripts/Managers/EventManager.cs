@@ -5,7 +5,6 @@ using UnityEngine.Events;
 
 public static class EventManager
 {
-    // Events
     public static UnityAction ButtonClicked;
     public static UnityAction LevelOpened;
     public static UnityAction LevelStarted;
@@ -15,6 +14,7 @@ public static class EventManager
     public static UnityAction GameStarted;
     public static UnityAction CountdownStarted;
 
+    // Events
     public static void OnLevelOpen() {
         LevelOpened?.Invoke();
     }
