@@ -1659,10 +1659,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f6c41cc905fd054988c32fde53fac38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  endingSong: {fileID: 8300000, guid: f586a038c3bef014fbee916c620c5207, type: 3}
-  cheeringClip: {fileID: 8300000, guid: 3710b1757c46b8b4ab87e9db6d8bb948, type: 3}
-  clickClip: {fileID: 8300000, guid: 8bd460a24bb9aff489c46d5e9b2566df, type: 3}
-  mainMenuButton: {fileID: 183344061}
+  _mainMenuButton: {fileID: 183344061}
 --- !u!1 &1548246294
 GameObject:
   m_ObjectHideFlags: 0

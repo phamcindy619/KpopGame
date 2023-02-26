@@ -6,13 +6,13 @@ using UnityEngine.UI;
 
 public class Ending : MonoBehaviour
 {
-    public Button mainMenuButton;
+    [SerializeField] private Button _mainMenuButton;
 
     // Start is called before the first frame update
     void Start()
     {
         EventManager.OnEndingScene();
-        mainMenuButton.onClick.AddListener(EventManager.ButtonClicked);
+        _mainMenuButton.onClick.AddListener(EventManager.ButtonClicked);
     }
 
     public void EndGame() {

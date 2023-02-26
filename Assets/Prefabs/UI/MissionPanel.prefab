@@ -497,10 +497,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 310e9eae9664267459a46932a48ffca7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  missionText: {fileID: 261351272871241284}
-  startButton: {fileID: 261351274470209823}
+  _missionText: {fileID: 261351272871241284}
+  _startButton: {fileID: 261351274470209823}
   textSpeed: 0.05
-  clickClip: {fileID: 8300000, guid: 8bd460a24bb9aff489c46d5e9b2566df, type: 3}
 --- !u!1 &261351274470209821
 GameObject:
   m_ObjectHideFlags: 0

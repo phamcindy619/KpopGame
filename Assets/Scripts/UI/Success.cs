@@ -9,22 +9,22 @@ public class Success : MonoBehaviour
     private string _successFilePath;
 
     // UI
-    public TextMeshProUGUI successText;
-    public Button nextButton;
+    [SerializeField] private TextMeshProUGUI _successText;
+    [SerializeField] private Button _nextButton;
 
     // Start is called before the first frame update
     void Start()
     {
         _successFilePath = Application.streamingAssetsPath + "/Texts/Success.txt";
 
-        successText.gameObject.AddComponent<ReadTextFile>();
+        _successText.gameObject.AddComponent<ReadTextFile>();
         DisplayText();
 
-        nextButton.onClick.AddListener(GameManager.instance.NextLevel);
-        nextButton.onClick.AddListener(EventManager.ButtonClicked);
+        _nextButton.onClick.AddListener(GameManager.instance.NextLevel);
+        _nextButton.onClick.AddListener(EventManager.ButtonClicked);
     }
 
     public void DisplayText() {
-        successText.text = successText.gameObject.GetComponent<ReadTextFile>().ReadText(_successFilePath);
+        _successText.text = _successText.gameObject.GetComponent<ReadTextFile>().ReadText(_successFilePath);
     }
 }

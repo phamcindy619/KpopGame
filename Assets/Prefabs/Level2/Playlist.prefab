@@ -493,11 +493,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   songs: []
   addedToPlaylist: []
-  albumImage: {fileID: 8524815300846941177}
-  prevButton: {fileID: 8524815302450823360}
-  nextButton: {fileID: 8524815302549985601}
-  addRemoveButton: {fileID: 8524815301708326688}
-  songText: {fileID: 8524815302056078406}
+  _albumImage: {fileID: 8524815300846941177}
+  _prevButton: {fileID: 8524815302450823360}
+  _nextButton: {fileID: 8524815302549985601}
+  _addRemoveButton: {fileID: 8524815301708326688}
+  _songText: {fileID: 8524815302056078406}
   _addSprite: {fileID: 21300000, guid: a92811a854128864697b893812d628a3, type: 3}
   _removeSprite: {fileID: 21300000, guid: 0cd886d54c546524199622151432ee49, type: 3}
 --- !u!1 &8524815301628165664

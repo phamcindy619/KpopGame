@@ -7,9 +7,10 @@ using UnityEngine.UI;
 public class Level1 : MonoBehaviour, ILevel
 {
     // UI
-    public GameObject ticketPanel;
-    public Button buyButton;
-    public TextMeshProUGUI scoreText;
+    [Header("UI")]
+    [SerializeField] private GameObject _ticketPanel;
+    [SerializeField] private Button _buyButton;
+    [SerializeField] private TextMeshProUGUI _scoreText;
 
     // Scoring
     private int _score;
@@ -20,23 +21,23 @@ public class Level1 : MonoBehaviour, ILevel
     void Start()
     {
         _score = 0;
-        buyButton.onClick.AddListener(IncreaseScore);
+        _buyButton.onClick.AddListener(IncreaseScore);
     }
 
     void Awake() {
         EventManager.OnLevelStart();
         
-        ticketPanel.SetActive(false);
-        scoreText.gameObject.SetActive(false);
+        _ticketPanel.SetActive(false);
+        _scoreText.gameObject.SetActive(false);
     }
 
     public void PlayGame() {
-        ticketPanel.SetActive(true);
-        scoreText.gameObject.SetActive(true);
+        _ticketPanel.SetActive(true);
+        _scoreText.gameObject.SetActive(true);
     }
 
     public void EndGame() {
-        ticketPanel.SetActive(false);
+        _ticketPanel.SetActive(false);
     }
 
     private void IncreaseScore() {
@@ -45,7 +46,7 @@ public class Level1 : MonoBehaviour, ILevel
     }
 
     private void DisplayScore() {
-        scoreText.text = "Clicks: " + _score;
+        _scoreText.text = "Clicks: " + _score;
     }
 
     // Determines whether the level was successful

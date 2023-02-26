@@ -30,11 +30,11 @@ public class UIManager : MonoBehaviour
     }
 
     private void OpenMission() {
-        _missionPanel = GameObject.Find("MissionPanel");
-        _countdown = GameObject.Find("Countdown");
-        _timer = GameObject.Find("Timer");
-        _successPanel = GameObject.Find("SuccessPanel");
-        _failPanel = GameObject.Find("FailPanel");
+        _missionPanel = FindObjectOfType<Mission>().gameObject;
+        _countdown = FindObjectOfType<Countdown>().gameObject;
+        _timer = FindObjectOfType<Timer>().gameObject;
+        _successPanel = FindObjectOfType<Success>().gameObject;
+        _failPanel = FindObjectOfType<Failure>().gameObject;
 
         _missionPanel.SetActive(true);
         _countdown.SetActive(false);

@@ -439,9 +439,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66af385a5e857b649b434acb5c3c66b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ticketPanel: {fileID: 2002493939}
-  buyButton: {fileID: 1085429081}
-  scoreText: {fileID: 2103058461}
+  _ticketPanel: {fileID: 2002493939}
+  _buyButton: {fileID: 1085429081}
+  _scoreText: {fileID: 2103058461}
 --- !u!1 &816411265
 GameObject:
   m_ObjectHideFlags: 0

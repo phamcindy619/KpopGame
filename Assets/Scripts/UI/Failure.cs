@@ -9,22 +9,22 @@ public class Failure : MonoBehaviour
     private string _failFilePath;
 
     // UI
-    public TextMeshProUGUI failText;
-    public Button restartButton;
+    [SerializeField] private TextMeshProUGUI _failText;
+    [SerializeField] private Button _restartButton;
 
     // Start is called before the first frame update
     void Start()
     {
         _failFilePath = Application.streamingAssetsPath + "/Texts/Failure.txt";
         
-        failText.gameObject.AddComponent<ReadTextFile>();
+        _failText.gameObject.AddComponent<ReadTextFile>();
         DisplayText();
 
-        restartButton.onClick.AddListener(GameManager.instance.RestartLevel);
-        restartButton.onClick.AddListener(EventManager.ButtonClicked);
+        _restartButton.onClick.AddListener(GameManager.instance.RestartLevel);
+        _restartButton.onClick.AddListener(EventManager.ButtonClicked);
     }
 
     public void DisplayText() {
-        failText.text = failText.gameObject.GetComponent<ReadTextFile>().ReadText(_failFilePath);
+        _failText.text = _failText.gameObject.GetComponent<ReadTextFile>().ReadText(_failFilePath);
     }
 }

@@ -9,8 +9,8 @@ public class Mission : MonoBehaviour
     private string _missionsFilePath;
 
     // UI
-    public TextMeshProUGUI missionText;
-    public Button startButton;
+    [SerializeField] private TextMeshProUGUI _missionText;
+    [SerializeField] private Button _startButton;
     public float textSpeed = 0.05f;
 
     // Start is called before the first frame update
@@ -18,16 +18,16 @@ public class Mission : MonoBehaviour
     {
         _missionsFilePath = Application.streamingAssetsPath + "/Texts/Missions.txt";
 
-        missionText.gameObject.AddComponent<ReadTextFile>();
-        missionText.gameObject.AddComponent<TextWriter>();
+        _missionText.gameObject.AddComponent<ReadTextFile>();
+        _missionText.gameObject.AddComponent<TextWriter>();
         DisplayText();
 
-        startButton.onClick.AddListener(EventManager.CountdownStarted);
-        startButton.onClick.AddListener(EventManager.ButtonClicked);
+        _startButton.onClick.AddListener(EventManager.CountdownStarted);
+        _startButton.onClick.AddListener(EventManager.ButtonClicked);
     }
 
     void DisplayText() {
-        string text = missionText.gameObject.GetComponent<ReadTextFile>().ReadText(_missionsFilePath);
-        missionText.gameObject.GetComponent<TextWriter>().AddWriter(missionText, text, textSpeed);
+        string text = _missionText.gameObject.GetComponent<ReadTextFile>().ReadText(_missionsFilePath);
+        _missionText.gameObject.GetComponent<TextWriter>().AddWriter(_missionText, text, textSpeed);
     }
 }

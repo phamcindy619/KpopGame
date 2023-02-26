@@ -27,10 +27,14 @@ public class Playlist : MonoBehaviour
     private int _currSongIndex;
 
     // UI
-    public Image albumImage;
-    public Button prevButton, nextButton, addRemoveButton;
-    public TextMeshProUGUI songText;
-    public Sprite _addSprite, _removeSprite;
+    [Header("UI")]
+    [SerializeField] private Image _albumImage;
+    [SerializeField] private Button _prevButton;
+    [SerializeField] private Button _nextButton;
+    [SerializeField] private Button _addRemoveButton;
+    [SerializeField] private TextMeshProUGUI _songText;
+    [SerializeField] private Sprite _addSprite;
+    [SerializeField] private Sprite _removeSprite;
 
     // Start is called before the first frame update
     void Start()
@@ -42,12 +46,12 @@ public class Playlist : MonoBehaviour
         _currSongIndex = 0;
 
         // Listeners
-        prevButton.onClick.AddListener(PrevSong);
-        prevButton.onClick.AddListener(EventManager.ButtonClicked);
-        nextButton.onClick.AddListener(NextSong);
-        nextButton.onClick.AddListener(EventManager.ButtonClicked);
-        addRemoveButton.onClick.AddListener(AddRemoveSong);
-        addRemoveButton.onClick.AddListener(EventManager.ButtonClicked);
+        _prevButton.onClick.AddListener(PrevSong);
+        _prevButton.onClick.AddListener(EventManager.ButtonClicked);
+        _nextButton.onClick.AddListener(NextSong);
+        _nextButton.onClick.AddListener(EventManager.ButtonClicked);
+        _addRemoveButton.onClick.AddListener(AddRemoveSong);
+        _addRemoveButton.onClick.AddListener(EventManager.ButtonClicked);
 
         // Get songs
         LoadSongs();
@@ -86,27 +90,27 @@ public class Playlist : MonoBehaviour
         // Remove the song from playlist
         if (addedToPlaylist.Contains(currSong)) {
             addedToPlaylist.Remove(currSong);
-            addRemoveButton.GetComponent<Image>().sprite = _addSprite;
+            _addRemoveButton.GetComponent<Image>().sprite = _addSprite;
         }
         else {
             addedToPlaylist.Add(currSong);
-            addRemoveButton.GetComponent<Image>().sprite = _removeSprite;
+            _addRemoveButton.GetComponent<Image>().sprite = _removeSprite;
         }
     }
 
     private void DisplaySong(Song currSong) {
-        songText.text = currSong.name + " - " + currSong.artist;
+        _songText.text = currSong.name + " - " + currSong.artist;
         
         // Check if song is in playlist and display the add/remove button
         if (addedToPlaylist.Contains(currSong)) {
-            addRemoveButton.GetComponent<Image>().sprite = _removeSprite;
+            _addRemoveButton.GetComponent<Image>().sprite = _removeSprite;
         }
         else {
-            addRemoveButton.GetComponent<Image>().sprite = _addSprite;
+            _addRemoveButton.GetComponent<Image>().sprite = _addSprite;
         }
 
         // Display album image
-        albumImage.sprite = GetAlbumImage(currSong);
+        _albumImage.sprite = GetAlbumImage(currSong);
     }
 
     private Sprite GetAlbumImage(Song song) {

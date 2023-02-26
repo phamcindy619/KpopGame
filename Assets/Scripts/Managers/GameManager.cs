@@ -57,12 +57,14 @@ public class GameManager : MonoBehaviour
 
     // Restarts the current level
     public void RestartLevel() {
-        StartCoroutine(_loader.LoadLevel(SceneManager.GetActiveScene().buildIndex));
+        int currLevel = SceneManager.GetActiveScene().buildIndex;
+        StartCoroutine(_loader.LoadLevel(currLevel));
     }
 
     // Go to the next level
     public void NextLevel() {
-        StartCoroutine(_loader.LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+        int currLevel = SceneManager.GetActiveScene().buildIndex;
+        StartCoroutine(_loader.LoadLevel(currLevel + 1));
     }
 
 }

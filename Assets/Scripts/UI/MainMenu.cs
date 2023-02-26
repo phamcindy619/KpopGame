@@ -5,17 +5,17 @@ using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
-    public GameObject credits;
-    public Button creditsButton;
-    public Button startButton;
+    [SerializeField] private GameObject _credits;
+    [SerializeField] private Button _creditsButton;
+    [SerializeField] private Button _startButton;
 
     private LevelLoader _loader;
 
     void Start() {
         _loader = GameObject.Find("LevelLoader").GetComponent<LevelLoader>();
-        credits.SetActive(false);
-        creditsButton.onClick.AddListener(EventManager.ButtonClicked);
-        startButton.onClick.AddListener(EventManager.ButtonClicked);
+        _credits.SetActive(false);
+        _creditsButton.onClick.AddListener(EventManager.ButtonClicked);
+        _startButton.onClick.AddListener(EventManager.ButtonClicked);
         EventManager.OnGameStart();
     }
 
@@ -24,6 +24,6 @@ public class MainMenu : MonoBehaviour
     }
 
     public void OpenCredits() {
-        credits.SetActive(true);
+        _credits.SetActive(true);
     }
 }

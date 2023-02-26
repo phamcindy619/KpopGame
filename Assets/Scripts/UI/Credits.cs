@@ -7,27 +7,26 @@ using UnityEngine.UI;
 
 public class Credits : MonoBehaviour
 {
-    [HideInInspector]
-    public string creditsFilePath;
-    public TextMeshProUGUI creditsText;
+    private string _creditsFilePath;
+    [SerializeField] private TextMeshProUGUI _creditsText;
 
-    public Button backButton;
+    [SerializeField] private Button _backButton;
 
     // Start is called before the first frame update
     void Start()
     {
-        creditsFilePath = Application.streamingAssetsPath + "/Texts/Credits.txt";
+        _creditsFilePath = Application.streamingAssetsPath + "/Texts/Credits.txt";
 
         DisplayCredits();
 
-        backButton.onClick.AddListener(EventManager.ButtonClicked);
+        _backButton.onClick.AddListener(EventManager.ButtonClicked);
     }
 
     // Display all the text from the credits file
     private void DisplayCredits() {
-        string[] fileLines = File.ReadAllLines(creditsFilePath);
+        string[] fileLines = File.ReadAllLines(_creditsFilePath);
         foreach (string line in fileLines) {
-            creditsText.text += line + "\n";
+            _creditsText.text += line + "\n";
         }
     }
 

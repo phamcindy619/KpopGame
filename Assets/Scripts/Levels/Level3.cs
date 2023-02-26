@@ -5,41 +5,35 @@ using TMPro;
 
 public class Level3 : MonoBehaviour, ILevel
 {
-    public GameObject fanchantPanel;
-
-    [SerializeField]
-    private TextMeshProUGUI fanchantText;
-    [SerializeField]
-    private TMP_InputField inputText;
+    // UI
+    [Header("UI")]
+    [SerializeField] private GameObject _fanchantPanel;
+    [SerializeField] private TextMeshProUGUI _fanchantText;
+    [SerializeField] private TMP_InputField _inputText;
+    
     private const float TIME_FOR_LEVEL = 20f;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     void Awake() {
         EventManager.OnLevelStart();
-        fanchantPanel.SetActive(false);
+        _fanchantPanel.SetActive(false);
     }
 
     public void PlayGame()
     {
-        fanchantPanel.SetActive(true);
-        inputText.Select();
+        _fanchantPanel.SetActive(true);
+        _inputText.Select();
     }
 
     public void EndGame()
     {
-        fanchantPanel.SetActive(false);
+        _fanchantPanel.SetActive(false);
     }
 
     public bool IsSuccessful()
     {
         // Compare user input to fanchant
-        string fanchant1 = fanchantText.text.ToLower();
-        string fanchant2 = inputText.text.ToLower();
+        string fanchant1 = _fanchantText.text.ToLower();
+        string fanchant2 = _inputText.text.ToLower();
         return fanchant1.Equals(fanchant2);
     }
 

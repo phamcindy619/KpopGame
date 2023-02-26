@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Level2 : MonoBehaviour, ILevel
 {
-    public GameObject playlistPanel;
+    [SerializeField] private GameObject _playlistPanel;
 
     private Playlist _playlist;
     private const float TIME_FOR_LEVEL = 30f;
@@ -12,20 +12,20 @@ public class Level2 : MonoBehaviour, ILevel
     // Start is called before the first frame update
     void Start()
     {
-        _playlist = playlistPanel.GetComponent<Playlist>();
+        _playlist = _playlistPanel.GetComponent<Playlist>();
     }
 
     void Awake() {
         EventManager.OnLevelStart();
-        playlistPanel.SetActive(false);
+        _playlistPanel.SetActive(false);
     }
 
     public void PlayGame() {
-        playlistPanel.SetActive(true);
+        _playlistPanel.SetActive(true);
     }
 
     public void EndGame() {
-        playlistPanel.SetActive(false);
+        _playlistPanel.SetActive(false);
     }
 
     public bool IsSuccessful() {

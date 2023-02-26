@@ -5,12 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class LevelLoader : MonoBehaviour
 {
-    public Animator transition;
+    [SerializeField] private Animator _transition;
     public float transitionTime = 2f;
 
     public IEnumerator LoadLevel(int levelIndex) {
         // Play animation
-        transition.SetTrigger("Start");
+        _transition.SetTrigger("Start");
 
         // Wait
         yield return new WaitForSeconds(transitionTime);
