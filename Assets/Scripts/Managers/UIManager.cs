@@ -10,7 +10,7 @@ public class UIManager : MonoBehaviour
     private GameObject _timer;
     private GameObject _successPanel;
     private GameObject _failPanel;
-
+    
     private void OnEnable() {
         EventManager.LevelStarted += OpenMission;
         EventManager.CountdownStarted += CloseMission;

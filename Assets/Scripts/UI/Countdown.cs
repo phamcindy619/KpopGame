@@ -20,8 +20,14 @@ public class Countdown : GameTime
         base.Update();
 
         if (_timeLeft <= 0) {
-            gameObject.SetActive(false);
-            EventManager.OnMissionStart();
+            StartCoroutine(WaitAfterCountdown());
         }
+    }
+
+    // Wait 1 second
+    private IEnumerator WaitAfterCountdown() {
+        yield return new WaitForSeconds(1.0f);
+        gameObject.SetActive(false);
+        EventManager.OnMissionStart();
     }
 }
