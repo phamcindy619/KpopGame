@@ -12,9 +12,9 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
-  productName: KpopGame
-  defaultCursor: {fileID: 0}
+  companyName: inPHAMous Technologies
+  productName: K-Pop Simulator
+  defaultCursor: {fileID: 2800000, guid: 822d5935e35ec2d4aa40b0771bc2a6c6, type: 3}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
   m_ShowUnitySplashScreen: 1
