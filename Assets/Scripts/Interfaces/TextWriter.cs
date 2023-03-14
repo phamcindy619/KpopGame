@@ -21,7 +21,7 @@ public class TextWriter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_uiText != null) {
+        if (_uiText != null && _textToWrite.Length > 0) {
             _timer -= Time.deltaTime;
             if (_timer <= 0f) {
                 _timer += _timePerChar;

@@ -17,7 +17,6 @@ public class Success : MonoBehaviour
     {
         _successFilePath = Application.streamingAssetsPath + "/Texts/Success.txt";
 
-        _successText.gameObject.AddComponent<ReadTextFile>();
         DisplayText();
 
         _nextButton.onClick.AddListener(GameManager.instance.NextLevel);
@@ -25,6 +24,7 @@ public class Success : MonoBehaviour
     }
 
     public void DisplayText() {
-        _successText.text = _successText.gameObject.GetComponent<ReadTextFile>().ReadText(_successFilePath);
+        ReadTextFile reader = new ReadTextFile();
+        _successText.text = reader.ReadLine(_successFilePath);
     }
 }

@@ -1,9 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.IO;
-using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.Networking;
+using System.Threading.Tasks;
 
 /*
     Text files should follow the format with empty lines in between:
@@ -14,19 +14,29 @@ using UnityEngine.SceneManagement;
     Line 3
 */
 
-public class ReadTextFile : MonoBehaviour
+public class ReadTextFile
 {
-    private StreamReader _sr;
-
-    public string ReadText(string filePath) {
-        _sr = new StreamReader(filePath);
-        string text = "";
-        int levelNum = int.Parse(SceneManager.GetActiveScene().name.Substring(5));
-
-        for (int i = 0; i < levelNum; i++) {
-            text = _sr.ReadLine();
-            _sr.ReadLine();
+    private  UnityWebRequest _webRequest;
+    private void LoadFile(string uri) {
+        _webRequest = UnityWebRequest.Get(uri);
+        UnityWebRequestAsyncOperation op = _webRequest.SendWebRequest();
+        while (!op.isDone) {
         }
-        return text;
+        if (_webRequest.result != UnityWebRequest.Result.Success) {
+            Debug.Log(_webRequest.result);
+        }
+    }
+
+    public string ReadAll(string filePath) {
+        LoadFile(filePath);
+        return _webRequest.downloadHandler.text;
+    }
+
+    public string ReadLine(string filePath) {
+        LoadFile(filePath);
+        string text = _webRequest.downloadHandler.text;
+        string[] lines = text.Split('\n');
+        int levelNum = int.Parse(SceneManager.GetActiveScene().name.Substring(5));
+        return lines[(levelNum - 1) * 2];
     }
 }

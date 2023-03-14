@@ -16,8 +16,6 @@ public class Failure : MonoBehaviour
     void Start()
     {
         _failFilePath = Application.streamingAssetsPath + "/Texts/Failure.txt";
-        
-        _failText.gameObject.AddComponent<ReadTextFile>();
         DisplayText();
 
         _restartButton.onClick.AddListener(GameManager.instance.RestartLevel);
@@ -25,6 +23,7 @@ public class Failure : MonoBehaviour
     }
 
     public void DisplayText() {
-        _failText.text = _failText.gameObject.GetComponent<ReadTextFile>().ReadText(_failFilePath);
+        ReadTextFile reader = new ReadTextFile();
+        _failText.text = reader.ReadLine(_failFilePath);
     }
 }

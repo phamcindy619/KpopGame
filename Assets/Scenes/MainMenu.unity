@@ -1049,6 +1049,10 @@ PrefabInstance:
       propertyPath: _credits
       value: 
       objectReference: {fileID: 1231874978}
+    - target: {fileID: 6070603843764167632, guid: 44b0fa5bb04462041934a6c904509e60, type: 3}
+      propertyPath: _quitButton
+      value: 
+      objectReference: {fileID: 6070603844471211552}
     - target: {fileID: 6070603843764167633, guid: 44b0fa5bb04462041934a6c904509e60, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1139,3 +1143,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44b0fa5bb04462041934a6c904509e60, type: 3}
+--- !u!114 &6070603844471211552 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1374180955125397275, guid: 44b0fa5bb04462041934a6c904509e60, type: 3}
+  m_PrefabInstance: {fileID: 6070603844471211551}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

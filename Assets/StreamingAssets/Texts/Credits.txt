@@ -1,5 +1,5 @@
 - Game by Cindy Pham
-- Font by Kenney
+- Font and cursor by Kenney
 - Logos by Canva
 - UI by Eun woo on Unity Asset Store
 - Stage image by upklyak on Freepik

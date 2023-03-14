@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.IO;
 using TMPro;
 using UnityEngine.UI;
 
@@ -16,7 +15,6 @@ public class Credits : MonoBehaviour
     void Start()
     {
         _creditsFilePath = Application.streamingAssetsPath + "/Texts/Credits.txt";
-
         DisplayCredits();
 
         _backButton.onClick.AddListener(EventManager.ButtonClicked);
@@ -24,10 +22,8 @@ public class Credits : MonoBehaviour
 
     // Display all the text from the credits file
     private void DisplayCredits() {
-        string[] fileLines = File.ReadAllLines(_creditsFilePath);
-        foreach (string line in fileLines) {
-            _creditsText.text += line + "\n";
-        }
+        ReadTextFile reader = new ReadTextFile();
+        _creditsText.text = reader.ReadAll(_creditsFilePath);
     }
 
     public void CloseCredits() {

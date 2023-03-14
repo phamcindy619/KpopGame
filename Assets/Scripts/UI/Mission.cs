@@ -18,7 +18,6 @@ public class Mission : MonoBehaviour
     {
         _missionsFilePath = Application.streamingAssetsPath + "/Texts/Missions.txt";
 
-        _missionText.gameObject.AddComponent<ReadTextFile>();
         _missionText.gameObject.AddComponent<TextWriter>();
         DisplayText();
 
@@ -27,7 +26,8 @@ public class Mission : MonoBehaviour
     }
 
     void DisplayText() {
-        string text = _missionText.gameObject.GetComponent<ReadTextFile>().ReadText(_missionsFilePath);
+        ReadTextFile reader = new ReadTextFile();
+        string text = reader.ReadLine(_missionsFilePath);
         _missionText.gameObject.GetComponent<TextWriter>().AddWriter(_missionText, text, textSpeed);
     }
 }
