@@ -1,9 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.Networking;
-using System.Threading.Tasks;
 
 /*
     Text files should follow the format with empty lines in between:
@@ -16,26 +12,14 @@ using System.Threading.Tasks;
 
 public class ReadTextFile
 {
-    private  UnityWebRequest _webRequest;
-    private void LoadFile(string uri) {
-        _webRequest = UnityWebRequest.Get(uri);
-        UnityWebRequestAsyncOperation op = _webRequest.SendWebRequest();
-        while (!op.isDone) {
-        }
-        if (_webRequest.result != UnityWebRequest.Result.Success) {
-            Debug.Log(_webRequest.result);
-        }
-    }
-
     public string ReadAll(string filePath) {
-        LoadFile(filePath);
-        return _webRequest.downloadHandler.text;
+        TextAsset textFile = Resources.Load<TextAsset>(filePath) as TextAsset;
+        return textFile.text;
     }
 
     public string ReadLine(string filePath) {
-        LoadFile(filePath);
-        string text = _webRequest.downloadHandler.text;
-        string[] lines = text.Split('\n');
+        TextAsset textFile = Resources.Load<TextAsset>(filePath) as TextAsset;
+        string[] lines = textFile.text.Split('\n');
         int levelNum = int.Parse(SceneManager.GetActiveScene().name.Substring(5));
         return lines[(levelNum - 1) * 2];
     }

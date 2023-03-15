@@ -15,7 +15,7 @@ public class Failure : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _failFilePath = Application.streamingAssetsPath + "/Texts/Failure.txt";
+        _failFilePath = "Texts/Failure";
         DisplayText();
 
         _restartButton.onClick.AddListener(GameManager.instance.RestartLevel);

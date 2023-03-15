@@ -16,7 +16,7 @@ public class Mission : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _missionsFilePath = Application.streamingAssetsPath + "/Texts/Missions.txt";
+        _missionsFilePath = "Texts/Missions";
 
         _missionText.gameObject.AddComponent<TextWriter>();
         DisplayText();

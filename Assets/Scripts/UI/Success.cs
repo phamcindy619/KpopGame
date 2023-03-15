@@ -15,7 +15,7 @@ public class Success : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _successFilePath = Application.streamingAssetsPath + "/Texts/Success.txt";
+        _successFilePath = "Texts/Success";
 
         DisplayText();
 

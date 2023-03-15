@@ -14,7 +14,7 @@ public class Credits : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _creditsFilePath = Application.streamingAssetsPath + "/Texts/Credits.txt";
+        _creditsFilePath = "Texts/Credits";
         DisplayCredits();
 
         _backButton.onClick.AddListener(EventManager.ButtonClicked);

@@ -39,8 +39,8 @@ public class Playlist : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _songsFilePath = Application.streamingAssetsPath + "/JSON/Songs.json";
-        _albumsFilePath = Application.streamingAssetsPath + "/AlbumImages/";
+        _songsFilePath = "JSON/Songs";
+        _albumsFilePath = "AlbumImages/";
         songs = new List<Song>();
         addedToPlaylist = new List<Song>();
         _currSongIndex = 0;
@@ -59,7 +59,7 @@ public class Playlist : MonoBehaviour
     }
 
     private void LoadSongs() {
-        string jsonStr = File.ReadAllText(_songsFilePath);
+        string jsonStr = Resources.Load<TextAsset>(_songsFilePath).text;
         SongList songList = JsonUtility.FromJson<SongList>(jsonStr);
         foreach (Song song in songList.songs) {
             songs.Add(song);
@@ -114,10 +114,11 @@ public class Playlist : MonoBehaviour
     }
 
     private Sprite GetAlbumImage(Song song) {
-        byte[] pngBytes = File.ReadAllBytes(_albumsFilePath + song.image);
+        return Resources.Load<Sprite>(_albumsFilePath + song.image);
+        // byte[] pngBytes = File.ReadAllBytes(_albumsFilePath + song.image);
 
-        Texture2D tex = new Texture2D(2, 2);
-        tex.LoadImage(pngBytes);
-        return Sprite.Create(tex, new Rect(0f, 0f, tex.width, tex.height), new Vector2(0.5f, 0.5f), 100f);
+        // Texture2D tex = new Texture2D(2, 2);
+        // tex.LoadImage(pngBytes);
+        // return Sprite.Create(tex, new Rect(0f, 0f, tex.width, tex.height), new Vector2(0.5f, 0.5f), 100f);
     }
 }

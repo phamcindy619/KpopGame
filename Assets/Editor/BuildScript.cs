@@ -13,6 +13,13 @@ public class BuildScript
         "Assets/Scenes/Ending.unity"
     };
 
+    [MenuItem("Build/Build All")]
+    public static void BuildAll() {
+        BuildWindows();
+        BuildMacOS();
+        BuildWebGL();
+    }
+
     [MenuItem("Build/Windows")]
     public static void BuildWindows() {
         string path = "Builds/Windows";
@@ -49,5 +56,20 @@ public class BuildScript
 
         FileUtil.DeleteFileOrDirectory(path + "/K-PopSimulatorOSX.zip");
         ZipFile.CreateFromDirectory(path + "/K-PopSimulator.app", path + "/K-PopSimulatorOSX.zip", System.IO.Compression.CompressionLevel.Fastest, true);
+    }
+
+    [MenuItem("Build/WebGL")]
+    public static void BuildWebGL() {
+        string path = "Builds/WebGL";
+
+        BuildPipeline.BuildPlayer(
+            levels,
+            path + "/Player",
+            BuildTarget.WebGL,
+            BuildOptions.None
+        );
+
+        FileUtil.DeleteFileOrDirectory(path + "/K-PopSimulatorWeb.zip");
+        ZipFile.CreateFromDirectory(path + "/Player", path + "/K-PopSimulatorWeb.zip");
     }
 }
