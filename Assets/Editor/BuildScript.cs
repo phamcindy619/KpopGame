@@ -2,6 +2,7 @@ using UnityEditor;
 using UnityEngine;
 using System.IO;
 using System.IO.Compression;
+using System.Diagnostics;
 
 public class BuildScript
 {
@@ -23,6 +24,11 @@ public class BuildScript
     [MenuItem("Build/Windows")]
     public static void BuildWindows() {
         string path = "Builds/Windows";
+
+        // Clean up
+        FileUtil.DeleteFileOrDirectory(path + "/K-PopSimulator_Data");
+        FileUtil.DeleteFileOrDirectory(path + "/MonoBleedingEdge");
+        
         BuildPipeline.BuildPlayer(
             levels, 
             path + "/K-PopSimulator.exe", 
@@ -30,8 +36,6 @@ public class BuildScript
             BuildOptions.None
         );
         // Set up directory structure for InnoSetup
-        FileUtil.DeleteFileOrDirectory(path + "/Data");
-        FileUtil.DeleteFileOrDirectory(path + "/Edge");
         DirectoryInfo newDataFolder = Directory.CreateDirectory(path + "/Data");
         DirectoryInfo newEdgeFolder = Directory.CreateDirectory(path + "/Edge");
         FileUtil.MoveFileOrDirectory(path + "/K-PopSimulator_Data", newDataFolder.FullName + "/K-PopSimulator_Data");
@@ -40,6 +44,10 @@ public class BuildScript
         Directory.Move(newEdgeFolder.FullName, path + "/MonoBleedingEdge");
 
         FileUtil.DeleteFileOrDirectory(path + "/K-PopSimulator_BurstDebugInformation_DoNotShip");
+
+        Process proc = new Process();
+        proc.StartInfo.FileName = EditorUtility.OpenFilePanel("Choose Location of InnoSetup File", "", "iss");;
+        proc.Start();
     }
 
     [MenuItem("Build/MacOS")]
