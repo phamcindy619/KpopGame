@@ -80,4 +80,17 @@ public class BuildScript
         FileUtil.DeleteFileOrDirectory(path + "/K-PopSimulatorWeb.zip");
         ZipFile.CreateFromDirectory(path + "/Player", path + "/K-PopSimulatorWeb.zip");
     }
+
+    [MenuItem("Build/Android")]
+    public static void BuildAndroid() {
+        string path = "Builds/Android";
+        BuildPipeline.BuildPlayer(
+            levels,
+            path + "/K-PopSimulator.aab",
+            BuildTarget.Android,
+            BuildOptions.None
+        );
+        
+        FileUtil.DeleteFileOrDirectory(path + "/K-PopSimulator_BurstDebugInformation_DoNotShip");
+    }
 }

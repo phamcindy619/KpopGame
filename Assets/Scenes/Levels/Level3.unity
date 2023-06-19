@@ -997,20 +997,64 @@ PrefabInstance:
     m_TransformParent: {fileID: 1123517178}
     m_Modifications:
     - target: {fileID: 323046831273213333, guid: 6d1cb3280f8772342891b5ee06d7981a, type: 3}
-      propertyPath: m_text
-      value: OUR BRIGHT AND SHINING LIGHT! WE LOVE YOU, OUR ONE AND ONLY CANDY!
+      propertyPath: m_fontSize
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 323046831273213333, guid: 6d1cb3280f8772342891b5ee06d7981a, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 323046831273213333, guid: 6d1cb3280f8772342891b5ee06d7981a, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 323046831273213333, guid: 6d1cb3280f8772342891b5ee06d7981a, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 323046831273213333, guid: 6d1cb3280f8772342891b5ee06d7981a, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 323046831273213334, guid: 6d1cb3280f8772342891b5ee06d7981a, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 323046831273213334, guid: 6d1cb3280f8772342891b5ee06d7981a, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 323046831273213334, guid: 6d1cb3280f8772342891b5ee06d7981a, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 323046831273213334, guid: 6d1cb3280f8772342891b5ee06d7981a, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 600
+      value: -200
       objectReference: {fileID: 0}
-    - target: {fileID: 323046831613837566, guid: 6d1cb3280f8772342891b5ee06d7981a, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 700
+    - target: {fileID: 323046831273213334, guid: 6d1cb3280f8772342891b5ee06d7981a, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 250
       objectReference: {fileID: 0}
-    - target: {fileID: 323046831613837566, guid: 6d1cb3280f8772342891b5ee06d7981a, type: 3}
+    - target: {fileID: 323046831273213334, guid: 6d1cb3280f8772342891b5ee06d7981a, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 75
+      value: -150
+      objectReference: {fileID: 0}
+    - target: {fileID: 323046831613837565, guid: 6d1cb3280f8772342891b5ee06d7981a, type: 3}
+      propertyPath: m_GlobalFontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 7a68fa16e890cff4d8cbb90d947c6684, type: 2}
+    - target: {fileID: 323046831613837565, guid: 6d1cb3280f8772342891b5ee06d7981a, type: 3}
+      propertyPath: m_OnSelect.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 323046831613837565, guid: 6d1cb3280f8772342891b5ee06d7981a, type: 3}
+      propertyPath: m_OnSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 323046831613837565, guid: 6d1cb3280f8772342891b5ee06d7981a, type: 3}
+      propertyPath: m_OnSelect.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 323046831677780888, guid: 6d1cb3280f8772342891b5ee06d7981a, type: 3}
       propertyPath: m_Pivot.x

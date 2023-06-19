@@ -11,11 +11,27 @@ public class Level3 : MonoBehaviour, ILevel
     [SerializeField] private TextMeshProUGUI _fanchantText;
     [SerializeField] private TMP_InputField _inputText;
     
-    private const float TIME_FOR_LEVEL = 20f;
+    private const float TIME_FOR_LEVEL = 30f;
+
+    private float defaultFontSize = 40f;
+    private float fontSizeWhenKeyboardOpen = 25f;
 
     void Awake() {
         EventManager.OnLevelStart();
         _fanchantPanel.SetActive(false);
+    }
+
+    void Update() {
+        #if UNITY_ANDROID
+
+        if (TouchScreenKeyboard.visible) {
+            _fanchantText.fontSize = fontSizeWhenKeyboardOpen;
+        }
+        else {
+            _fanchantText.fontSize = defaultFontSize;
+        }
+
+        #endif
     }
 
     public void PlayGame()
@@ -41,5 +57,4 @@ public class Level3 : MonoBehaviour, ILevel
     {
         return TIME_FOR_LEVEL;
     }
-
 }
